@@ -16,7 +16,7 @@ function yoimg_register_module($module_path, $has_settings = false) {
 	if (! isset ( $yoimg_modules )) {
 		$yoimg_modules = array ();
 	}
-	$module_id = basename ( $module_path );
+	$module_id = basename ( dirname ( $module_path ) );
 	$yoimg_modules [$module_id] = array (
 			'has-settings' => $has_settings 
 	);

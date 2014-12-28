@@ -19,13 +19,11 @@ function yoimg_register_module($module_id, $module_path, $has_settings = false) 
 	if (! isset ( $yoimg_modules [$module_id] )) {
 		$module_loaded = false;
 		$module_init_file = $module_path . '/vendor/sirulli/' . $module_id . '/inc/init.php';
-		yoimg_log($module_init_file);
 		if (file_exists ( $module_init_file )) {
 			require_once ($module_init_file);
 			$module_loaded = true;
 		} else {
 			$module_init_file = $module_path . '/inc/init.php';
-			yoimg_log($module_init_file);
 			if (file_exists ( $module_init_file )) {
 				require_once ($module_init_file);
 				$module_loaded = true;

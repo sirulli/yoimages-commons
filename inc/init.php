@@ -21,11 +21,13 @@ if (is_admin ()) {
 	
 	require_once (YOIMG_COMMONS_PATH . '/settings.php');
 }
-function yoimg_settings_load_styles_and_scripts($hook) {
-	if (isset ( $_GET ['page'] ) && $_GET ['page'] === 'yoimg-settings') {
-		wp_enqueue_script ( 'yoimg-settings-js', YOIMG_COMMONS_URL . '/js/yoimg-settings.js', array (
-				'jquery' 
-		), false, true );
+if (! function_exists( 'yoimg_settings_load_styles_and_scripts' ) ) {
+	function yoimg_settings_load_styles_and_scripts($hook) {
+		if (isset ( $_GET ['page'] ) && $_GET ['page'] === 'yoimg-settings') {
+			wp_enqueue_script ( 'yoimg-settings-js', YOIMG_COMMONS_URL . '/js/yoimg-settings.js', array (
+					'jquery' 
+			), false, true );
+		}
 	}
+	add_action ( 'admin_enqueue_scripts', 'yoimg_settings_load_styles_and_scripts' );
 }
-add_action ( 'admin_enqueue_scripts', 'yoimg_settings_load_styles_and_scripts' );

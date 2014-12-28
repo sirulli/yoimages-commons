@@ -11,13 +11,34 @@ function yoimg_log($message) {
 		}
 	}
 }
-function yoimg_register_module($module_path, $has_settings = false) {
+function yoimg_register_module($module_id, $module_path, $has_settings = false) {
 	global $yoimg_modules;
 	if (! isset ( $yoimg_modules )) {
 		$yoimg_modules = array ();
 	}
-	$module_id = basename ( dirname ( $module_path ) );
-	$yoimg_modules [$module_id] = array (
-			'has-settings' => $has_settings 
-	);
+	if (! isset ( $yoimg_modules [$module_id] )) {
+		$module_loaded = false;
+		$module_init_file = $module_path . '/vendor/sirulli/' . $module_id . '/inc/init.php';
+		yoimg_log($module_init_file);
+		if (file_exists ( $module_init_file )) {
+			require_once ($module_init_file);
+			$module_loaded = true;
+		} else {
+			$module_init_file = $module_path . '/inc/init.php';
+			yoimg_log($module_init_file);
+			if (file_exists ( $module_init_file )) {
+				require_once ($module_init_file);
+				$module_loaded = true;
+			}
+		}
+		if ($module_loaded) {
+			$yoimg_modules [$module_id] = array (
+					'has-settings' => $has_settings 
+			);
+		} else {
+			yoimg_log ( 'cannot load module ' . $module_id );
+		}
+	} else {
+		yoimg_log ( 'TODO: show warning because already loaded ' . $module_id );
+	}
 }

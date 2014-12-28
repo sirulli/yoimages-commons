@@ -108,9 +108,8 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 	
 		public function print_imgseo_options_section_info() {
 			print __('Enter your images SEO settings here below', YOIMG_DOMAIN );
-			$supported_expressions = array();
 			printf( '<p>' .
-				__( 'Supported expressions:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', $supported_expressions ) )
+				__( 'Supported expressions:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', array() ) )
 				. '</p>'
 			);
 		}
@@ -142,7 +141,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		public function imgseo_image_title_expression_callback() {
 			printf(
 			'<input type="text" id="imgseo_image_title_expression" name="yoimg_seo_settings[imgseo_image_title_expression]" value="%s" class="imgseo_change_image_title-dep" />
-				<p class="description">' . __( 'expression used to replace the title, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', $supported_expressions ) ) . '</p>',
+				<p class="description">' . __( 'expression used to replace the title, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', array() ) ) . '</p>',
 					! empty( $this->seo_options['imgseo_image_title_expression'] ) ? esc_attr( $this->seo_options['imgseo_image_title_expression'] ) : YOIMG_IMGSEO_IMAGE_TITLE_EXPRESSION
 			);
 		}
@@ -158,7 +157,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		public function imgseo_image_alt_expression_callback() {
 			printf(
 			'<input type="text" id="imgseo_image_alt_expression" name="yoimg_seo_settings[imgseo_image_alt_expression]" value="%s" class="imgseo_change_image_alt-dep" />
-				<p class="description">' . __( 'expression used to replace the alt, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', $supported_expressions ) ) . '</p>',
+				<p class="description">' . __( 'expression used to replace the alt, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', array() ) ) . '</p>',
 					! empty( $this->seo_options['imgseo_image_alt_expression'] ) ? esc_attr( $this->seo_options['imgseo_image_alt_expression'] ) : YOIMG_IMGSEO_IMAGE_ALT_EXPRESSION
 			);
 		}
@@ -174,7 +173,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		public function imgseo_image_filename_expression_callback() {
 			printf(
 			'<input type="text" id="imgseo_image_filename_expression" name="yoimg_seo_settings[imgseo_image_filename_expression]" value="%s" class="imgseo_change_image_filename-dep" />
-				<p class="description">' . __( 'expression used to replace the filename, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', $supported_expressions ) ) . '</p>',
+				<p class="description">' . __( 'expression used to replace the filename, accepted values are:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', array() ) ) . '</p>',
 					! empty( $this->seo_options['imgseo_image_filename_expression'] ) ? esc_attr( $this->seo_options['imgseo_image_filename_expression'] ) : YOIMG_IMGSEO_IMAGE_FILENAME_EXPRESSION
 			);
 		}

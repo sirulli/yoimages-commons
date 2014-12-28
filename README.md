@@ -1,6 +1,6 @@
 #YoImages Commons
 
-YoImages Commons is a repository of libraries included and used from all YoImages modules.
+YoImages Commons is a repository of libraries included and used by all YoImages modules.
 
 YoImages Commons provides the following functionalities:
 

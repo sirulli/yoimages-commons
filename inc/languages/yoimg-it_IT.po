@@ -159,7 +159,7 @@ msgstr "Questo crop è più piccolo di quello che serve, prova a sostituire l'im
 
 #: 
 msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
-msgstr "Non è stato possibile generare il crop perché l'immagine originale è troppo piccola, verrà usata l'immagine nelle sue dimensioni attuali, ti consigliamo di sostituire l'immagine originale cliccando sul bottone sostituisci qui sotto"
+msgstr "Non è stato possibile generare il crop perché l'immagine originale è troppo piccola, verrà usata l'immagine nelle sue dimensioni attuali, ti consigliamo di sostituire l'immagine originale cliccando sul bottone sostituisci qui accanto"
 
 #: 
 msgid "Crop not generated yet, use the crop button here below to generate it"

@@ -6,6 +6,8 @@ if (! defined ( 'ABSPATH' )) {
 if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 
 	define ( 'YOIMG_COMMONS_PATH', dirname ( __FILE__ ) );
+	define ( 'YOIMG_SUPPORTED_LOCALES', 'en_US it_IT de_DE' ); 
+	
 	require_once (YOIMG_COMMONS_PATH . '/utils.php');
 	
 	if (is_admin ()) {

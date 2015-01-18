@@ -21,7 +21,8 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 		);
 		
 		define ( 'YOIMG_DOMAIN', 'yoimg' );
-		load_plugin_textdomain ( YOIMG_DOMAIN, FALSE, plugin_basename ( YOIMG_COMMONS_PATH . '/languages/' ) );
+		define ( 'YOIMG_LANG_REL_PATH', plugin_basename ( YOIMG_COMMONS_PATH . '/languages/' ) );
+		load_plugin_textdomain ( YOIMG_DOMAIN, FALSE, YOIMG_LANG_REL_PATH );
 		
 		require_once (YOIMG_COMMONS_PATH . '/settings.php');
 	}

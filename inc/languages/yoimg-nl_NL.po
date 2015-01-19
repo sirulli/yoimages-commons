@@ -3,309 +3,249 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: POEditor.com\n"
 "Project-Id-Version: YoImages\n"
-"Language: en\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Matteo Cajani <matteo.cajani@gmail.com>\n"
-"Language-Team: \n"
+"Language: nl\n"
 
+#: 
 msgid "[title]"
 msgstr "[title]"
 
+#: 
 msgid "[type]"
 msgstr "[post_type]"
 
+#: 
 msgid "[site_name]"
 msgstr "[site_name]"
 
+#: 
 msgid "[tags]"
 msgstr "[tags]"
 
+#: 
 msgid "[categories]"
 msgstr "[categories]"
 
-#: ../inc/utils.php:18
-msgid "Edit cropped formats"
-msgstr "Bewerk uitsnedes"
-
+#: 
 msgid "YoImages settings"
 msgstr "YoImages instellingen"
 
+#: 
 msgid "You do not have sufficient permissions to access this page."
 msgstr "U heeft onvoldoende rechten om deze pagina aan te passen."
 
-#: ../inc/settings.php:47
-msgid "Cropping"
-msgstr "Uitsnede instellingen"
-
-#: ../inc/settings.php:48
-msgid "Active"
-msgstr "Activeer"
-
+#: 
 msgid "Crop qualities"
 msgstr "Uitsnede kwaliteit"
 
+#: 
 msgid "SEO for images"
 msgstr "SEO voor afbeeldingen"
 
+#: 
 msgid "Change image title"
 msgstr "Bewerk titel afbeelding"
 
+#: 
 msgid "Image title expression"
 msgstr "Afbeelding titel expressie"
 
+#: 
 msgid "Change image alt attribute"
 msgstr "Bewerk afbeelding ALT-tekst"
 
+#: 
 msgid "Image alt expression"
 msgstr "Afbeelding ALT-tekst expressie"
 
+#: 
 msgid "Change image file name"
 msgstr "Bewerk bestandsnaam afbeelding"
 
+#: 
 msgid "Image file name expression"
 msgstr "Bestandsnaam afbeelding expressie"
 
+#: 
 msgid "Enter your cropping settings here below"
 msgstr "Voer de uitsnede instellingen hieronder in"
 
+#: 
 msgid "Enter your images SEO settings here below"
 msgstr "Voer de afbeelding SEO instellingen hieronder in"
 
+#: 
 msgid "Supported expressions:"
 msgstr "Beschikbare expressies:"
 
-#: ../inc/settings.php:77
-msgid "Lorem ipsum cropping_is_active"
-msgstr "Indien aangevinkt is uitsnede actief"
-
-#: ../inc/settings.php:85
-msgid "Comma separated list of crop quality values"
-msgstr ""
-"komma gescheiden lijst van uitsnede kwaliteiten (100 allerbest tot 50 "
-"gemiddeld)"
-
-#: ../inc/settings.php:93
-msgid "Lorem ipsum imgseo_change_image_title"
-msgstr ""
-"Indien aangevinkt zal de titel vervangen worden door expressie hieronder"
-
-#: ../inc/settings.php:101
-msgid "Lorem ipsum imgseo_image_title_expression"
-msgstr ""
-"expressie ter vervanging van de titel, beschikbare waardes zijn: [title], "
-"[type], [tags], [categories], [site_name]"
-
-#: ../inc/settings.php:109
-msgid "Lorem ipsum imgseo_change_image_alt"
-msgstr ""
-"Indien aangevinkt zal de ALT-tekst vervangen worden door expressie hieronder"
-
-#: ../inc/settings.php:117
-msgid "Lorem ipsum imgseo_image_alt_expression"
-msgstr ""
-"expressie ter vervanging van de ALT-tekst, beschikbare waardes zijn: "
-"[title], [type], [tags], [categories], [site_name]"
-
-#: ../inc/settings.php:125
-msgid "Lorem ipsum imgseo_change_image_filename"
-msgstr ""
-"Indien aangevinkt zal de bestandsnaam vervangen worden door expressie "
-"hieronder"
-
-#: ../inc/settings.php:133
-msgid "Lorem ipsum imgseo_image_filename_expression"
-msgstr ""
-"expressie ter vervanging van de bestandsnaam, beschikbare waardes zijn: "
-"[title], [type], [tags], [categories], [site_name]"
-
+#: 
 msgid "Crop qualities value is not valid, using default:"
 msgstr "uitsnede kwaliteit is ongeldig, standaardwaarde toegepast"
 
-#: ../inc/settings.php:188
-msgid "imgseo_image_title_expression is not valid, using default:"
-msgstr "titel expressie is ongeldig, standaardwaarde toegepast"
-
-#: ../inc/settings.php:194
-msgid "imgseo_image_alt_expression is not valid, using default:"
-msgstr "ALT-tekst expressie is ongeldig, standaardwaarde toegepast"
-
-#: ../inc/settings.php:200
-msgid "imgseo_image_filename_expression is not valid, using default:"
-msgstr "bestandsnaam expressie is ongeldig, standaardwaarde toegepast"
-
+#: 
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../inc/img-cropping/html/edit-image-size.php:44
-msgid "Edit cropped formats from full image"
-msgstr "Maak uitsnede vanuit oorspronkelijke afbeelding"
-
+#: 
 msgid "Current"
 msgstr "Huidig"
 
-msgid ""
-"This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace "
-"the original image for this crop format using the replace button here below "
-"and then cropping it"
-msgstr ""
-"De uitsnede is kleiner dan verwacht. U mag de originele afbeelding vervangen "
-"door de VERVANG-knop te gebruiken en daarna een uitsnede te maken"
+#: 
+msgid "This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace the original image for this crop format using the replace button here below and then cropping it"
+msgstr "De uitsnede is kleiner dan verwacht. U mag de originele afbeelding vervangen door de VERVANG-knop te gebruiken en daarna een uitsnede te maken"
 
-msgid ""
-"Crop cannot be generated because original image is too small, you may "
-"replace the original image for this crop format using the replace button "
-"here below"
-msgstr ""
-"Uitsnede kan niet worden gemaakt omdat originele afbeelding te klein is, "
-"daarom zal originele afbeelding worden gebruikt. Klik op de vervang-knop om "
-"de afbeelding te vervangen"
+#: 
+msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
+msgstr "Uitsnede kan niet worden gemaakt omdat originele afbeelding te klein is, daarom zal originele afbeelding worden gebruikt. Klik op de vervang-knop om de afbeelding te vervangen"
 
+#: 
 msgid "Crop not generated yet, use the crop button here below to generate it"
-msgstr ""
-"Er is nog geen uitsnede gemaakt, klik op de [Maak uitsnede] knop om uitsnede "
-"te maken en te bewaren"
+msgstr "Er is nog geen uitsnede gemaakt, klik op de [Maak uitsnede] knop om uitsnede te maken en te bewaren"
 
+#: 
 msgid "Crop preview"
 msgstr "Voorvertoning uitsnede"
 
+#: 
 msgid "Replace image source for"
 msgstr "Vervang bron-afbeelding voor"
 
+#: 
 msgid "Replace"
 msgstr "Vervang"
 
+#: 
 msgid "Restore original image source for"
 msgstr "Herstel bron-afbeelding voor"
 
+#: 
 msgid "Restore"
 msgstr "Herstel"
 
+#: 
 msgid "Crop quality"
 msgstr "Uitsnede kwaliteit"
 
+#: 
 msgid "Crop"
 msgstr "Maak uitsnede"
 
-#: ../inc/img-cropping/html/custom-sizes-table-rows.php:9
-msgid "Current theme defined sizes"
-msgstr "Door thema bepaalde afmetingen"
-
+#: 
 msgid "The sizes listed below are the crop and resize formats defined by "
 msgstr "De lijst van afmetingen voor uitsnedes en verkleiningen bepaald door "
 
+#: 
 msgid "Width"
 msgstr "Breedte"
 
+#: 
 msgid "Height"
 msgstr "Hoogte"
 
+#: 
 msgid "Max Width"
 msgstr "Max Breedte"
 
+#: 
 msgid "Max Height"
 msgstr "Max Hoogte"
 
+#: 
 msgid "Type:"
 msgstr "Type:"
 
+#: 
 msgid "Hard cropped"
 msgstr "Harde uitsnede"
 
+#: 
 msgid "Resized"
 msgstr "Verkleind"
 
+#: 
 msgid "Hard cropped image"
 msgstr "Hard uitgesnede afbeelding"
 
-msgid ""
-"this image format contains only a part of the original image, it has fixed "
-"width and height so that the image ratio is fixed too, e.g. thumbnail in "
-"listings are cropped"
-msgstr ""
-"dit formaat afbeelding bevat slechts een deel van de originele afbeelding, "
-"het heeft een vaste breedte en hoogte verhouding en wordt bijvoorbeeld "
-"toegepast bij de thumbnail "
+#: 
+msgid "this image format contains only a part of the original image, it has fixed width and height so that the image ratio is fixed too, e.g. thumbnail in listings are cropped"
+msgstr "dit formaat afbeelding bevat slechts een deel van de originele afbeelding, het heeft een vaste breedte en hoogte verhouding en wordt bijvoorbeeld toegepast bij de thumbnail "
 
+#: 
 msgid "Resized image"
 msgstr "Uitgesnede afbeelding"
 
-msgid ""
-"this image format is not cropped but instead it is resized to fit the "
-"maximum available space, either in width or height, therefore this image "
-"ratio is not fixed"
-msgstr ""
-"dit formaat afbeelding is niet uitgesneden maar aangepast naar de maximale "
-"breedte en/of hoogte welke beschikbaar is, om die reden is de "
-"afbeeldingsverhouding niet vast"
+#: 
+msgid "this image format is not cropped but instead it is resized to fit the maximum available space, either in width or height, therefore this image ratio is not fixed"
+msgstr "dit formaat afbeelding is niet uitgesneden maar aangepast naar de maximale breedte en/of hoogte welke beschikbaar is, om die reden is de afbeeldingsverhouding niet vast"
 
-msgid ""
-"doesn't define any additional image size using the standard Wordpress "
-"functions (<a href=\"http://codex.wordpress.org/Function_Reference/"
-"add_image_size\" target=\"_blank\">add_image_size</a> and <a href=\"http://"
-"codex.wordpress.org/Function_Reference/set_post_thumbnail_size\" target="
-"\"_blank\">set_post_thumbnail_size</a>)"
-msgstr ""
-"voeg geen extra afmetingen toe op basis van de standaard Wordpress functies "
-"(<a href=\"http://codex.wordpress.org/Function_Reference/add_image_size\" "
-"target=\"_blank\">add_image_size</a> and <a href=\"http://codex.wordpress."
-"org/Function_Reference/set_post_thumbnail_size\" target=\"_blank"
-"\">set_post_thumbnail_size</a>)"
+#: 
+msgid "doesn't define any additional image size using the standard Wordpress functions (<a href=\"http://codex.wordpress.org/Function_Reference/add_image_size\" target=\"_blank\">add_image_size</a> and <a href=\"http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size\" target=\"_blank\">set_post_thumbnail_size</a>)"
+msgstr "voeg geen extra afmetingen toe op basis van de standaard Wordpress functies (<a href=\"http://codex.wordpress.org/Function_Reference/add_image_size\" target=\"_blank\">add_image_size</a> and <a href=\"http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size\" target=\"_blank\">set_post_thumbnail_size</a>)"
 
+#: 
 msgid "Edit crop formats"
 msgstr "Uitsnedes afbeelding bewerken"
 
 #. Ma la spunta che abilita il crop praticamente abilita il plugin? cioè potrei usarlo solo per la parte SEO?
+#: 
 msgid "Crop settings"
 msgstr "Uitsnede instellingen"
 
+#: 
 msgid "Enable"
 msgstr "Activeer"
 
+#: 
 msgid "If checked cropping is active"
 msgstr "Indien aangevinkt is uitsnede actief"
 
+#: 
 msgid "Comma separated list of crop quality values (100 best to 50 medium)"
-msgstr ""
-"komma gescheiden lijst van uitsnede kwaliteiten (100 allerbest tot 50 "
-"gemiddeld)"
+msgstr "komma gescheiden lijst van uitsnede kwaliteiten (100 allerbest tot 50 gemiddeld)"
 
+#: 
 msgid "If checked title will be replaced with the expression here below"
-msgstr ""
-"Indien aangevinkt zal de titel vervangen worden door expressie hieronder"
+msgstr "Indien aangevinkt zal de titel vervangen worden door expressie hieronder"
 
+#: 
 msgid "expression used to replace the title, accepted values are:"
 msgstr "expressie om de titel te vervangen, beschikbare waardes zijn:"
 
+#: 
 msgid "If checked alt will be replaced with the expression here below"
-msgstr ""
-"Indien aangevinkt zal de ALT-tekst vervangen worden door expressie hieronder"
+msgstr "Indien aangevinkt zal de ALT-tekst vervangen worden door expressie hieronder"
 
+#: 
 msgid "expression used to replace the alt, accepted values are:"
 msgstr "expressie om de ALT-tekst te vervangen, beschikbare waardes zijn:"
 
+#: 
 msgid "If checked the filename will be replaced with the expression here below"
-msgstr ""
-"Indien aangevinkt zal de bestandsnaam vervangen worden door expressie "
-"hieronder"
+msgstr "Indien aangevinkt zal de bestandsnaam vervangen worden door expressie hieronder"
 
+#: 
 msgid "expression used to replace the filename, accepted values are:"
 msgstr "expressie om de bestandsnaam te vervangen, beschikbare waardes zijn:"
 
+#: 
 msgid "title expression is not valid, using default:"
 msgstr "titel expressie is ongeldig, standaardwaarde toegepast"
 
+#: 
 msgid "alt expression is not valid, using default:"
 msgstr "ALT-tekst expressie is ongeldig, standaardwaarde toegepast"
 
+#: 
 msgid "filename expression is not valid, using default:"
 msgstr "bestandsnaam expressie is ongeldig, standaardwaarde toegepast"
 
 #. context? non sono riuscita a trovarla..
+#: 
 msgid "Edit crop formats from full image"
 msgstr "Kies tabblad en bewerk uitsnede vanuit orginele afbeelding"
 
+#: 
 msgid "Image sizes are defined by the current theme"
 msgstr "Afmetingen van afbeeldingen zijn bepaald door huidige thema"
+

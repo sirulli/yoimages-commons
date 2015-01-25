@@ -91,7 +91,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			add_settings_section( 'yoimg_crop_options_section', __( 'Crop settings', YOIMG_DOMAIN ), array( $this, 'print_crop_options_section_info' ), 'yoimages-crop' );
 			add_settings_field( 'cropping_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
 			add_settings_field( 'crop_qualities', __( 'Crop qualities', YOIMG_DOMAIN), array( $this, 'crop_qualities_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
-			add_settings_field( 'retina_cropping_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'retina_cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
+			add_settings_field( 'retina_cropping_is_active', __( 'LOREM ISPUM enable retina', YOIMG_DOMAIN ), array( $this, 'retina_cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
 			
 			add_settings_section( 'yoimg_imgseo_options_section', __( 'SEO for images', YOIMG_DOMAIN ), array( $this, 'print_imgseo_options_section_info' ), 'yoimages-seo' );
 			add_settings_field( 'imgseo_change_image_title', __( 'Change image title', YOIMG_DOMAIN ), array( $this, 'imgseo_change_image_title_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
@@ -133,7 +133,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 	
 		public function retina_cropping_is_active_callback() {
 			printf(
-			'<input type="checkbox" id="retina_cropping_is_active" name="yoimg_crop_settings[retina_cropping_is_active]" value="TRUE" %s />
+			'<input type="checkbox" id="retina_cropping_is_active" class="cropping_is_active-dep" name="yoimg_crop_settings[retina_cropping_is_active]" value="TRUE" %s />
 				<p class="description">' . __( 'LOREM IPSUM retina_cropping_is_active SPIEGARE CHE SERVONO ALTRI PLUGIN!', YOIMG_DOMAIN ) . '</p>',
 						$this->crop_options['retina_cropping_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_CROP_RETINA_ENABLED && ! isset( $this->crop_options['retina_cropping_is_active'] ) ? 'checked="checked"' : '' )
 			);

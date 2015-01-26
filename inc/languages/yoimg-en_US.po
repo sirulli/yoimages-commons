@@ -27,10 +27,6 @@ msgstr "[tags]"
 msgid "[categories]"
 msgstr "[categories]"
 
-#: ../inc/utils.php:18
-msgid "Edit cropped formats"
-msgstr "Edit crop formats"
-
 #: 
 msgid "YoImages settings"
 msgstr "YoImages settings"
@@ -38,14 +34,6 @@ msgstr "YoImages settings"
 #: 
 msgid "You do not have sufficient permissions to access this page."
 msgstr "You do not have sufficient permissions to access this page."
-
-#: ../inc/settings.php:47
-msgid "Cropping"
-msgstr "Crop settings"
-
-#: ../inc/settings.php:48
-msgid "Active"
-msgstr "Enable"
 
 #: 
 msgid "Crop qualities"
@@ -91,61 +79,13 @@ msgstr "Enter your images SEO settings here below"
 msgid "Supported expressions:"
 msgstr "Supported expressions:"
 
-#: ../inc/settings.php:77
-msgid "Lorem ipsum cropping_is_active"
-msgstr "If checked cropping is active"
-
-#: ../inc/settings.php:85
-msgid "Comma separated list of crop quality values"
-msgstr "Comma separated list of crop quality values (100 best to 50 medium)"
-
-#: ../inc/settings.php:93
-msgid "Lorem ipsum imgseo_change_image_title"
-msgstr "If checked title will be replaced with the expression here below"
-
-#: ../inc/settings.php:101
-msgid "Lorem ipsum imgseo_image_title_expression"
-msgstr "expression used to replace the title, accepted values are: [title], [type], [tags], [categories], [site_name]"
-
-#: ../inc/settings.php:109
-msgid "Lorem ipsum imgseo_change_image_alt"
-msgstr "If checked alt will be replaced with the expression here below"
-
-#: ../inc/settings.php:117
-msgid "Lorem ipsum imgseo_image_alt_expression"
-msgstr "expression used to replace the alt, accepted values are: [title], [type], [tags], [categories], [site_name]"
-
-#: ../inc/settings.php:125
-msgid "Lorem ipsum imgseo_change_image_filename"
-msgstr "If checked the filename will be replaced with the expression here below"
-
-#: ../inc/settings.php:133
-msgid "Lorem ipsum imgseo_image_filename_expression"
-msgstr "expression used to replace the filename, accepted values are: [title], [type], [tags], [categories], [site_name]"
-
 #: 
 msgid "Crop qualities value is not valid, using default:"
 msgstr "Crop qualities value is not valid, using default:"
 
-#: ../inc/settings.php:188
-msgid "imgseo_image_title_expression is not valid, using default:"
-msgstr "title expression is not valid, using default:"
-
-#: ../inc/settings.php:194
-msgid "imgseo_image_alt_expression is not valid, using default:"
-msgstr "alt expression is not valid, using default:"
-
-#: ../inc/settings.php:200
-msgid "imgseo_image_filename_expression is not valid, using default:"
-msgstr "filename expression is not valid, using default:"
-
 #: 
 msgid "Close"
 msgstr "Close"
-
-#: ../inc/img-cropping/html/edit-image-size.php:44
-msgid "Edit cropped formats from full image"
-msgstr "Edit crop formats from full image"
 
 #: 
 msgid "Current"
@@ -190,10 +130,6 @@ msgstr "Crop quality"
 #: 
 msgid "Crop"
 msgstr "Crop"
-
-#: ../inc/img-cropping/html/custom-sizes-table-rows.php:9
-msgid "Current theme defined sizes"
-msgstr "Image sizes are defined by the current theme"
 
 #: 
 msgid "The sizes listed below are the crop and resize formats defined by "
@@ -312,4 +248,20 @@ msgstr "Edit crop formats from full image"
 #: 
 msgid "Image sizes are defined by the current theme"
 msgstr "Image sizes are defined by the current theme"
+
+#: 
+msgid "Retina cropping enabled"
+msgstr "Retina cropping enabled "
+
+#: 
+msgid "This crop is too small to create the retina version of the image, you may replace the original image for this crop format using the replace button on the left and then crop it again."
+msgstr "This crop is too small to create the retina version of the image, you may replace the original image for this crop format using the replace button on the left and then crop it again. "
+
+#: 
+msgid "Retina friendly"
+msgstr "Retina friendly "
+
+#: 
+msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
+msgstr "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>) "
 

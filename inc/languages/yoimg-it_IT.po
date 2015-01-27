@@ -27,10 +27,6 @@ msgstr "[tags]"
 msgid "[categories]"
 msgstr "[categorie]"
 
-#: ../inc/utils.php:18
-msgid "Edit cropped formats"
-msgstr "Modifica i crop"
-
 #: 
 msgid "YoImages settings"
 msgstr "Impostazioni di YoImages"
@@ -38,15 +34,6 @@ msgstr "Impostazioni di YoImages"
 #: 
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Non hai permessi sufficienti per accedere a questa pagina"
-
-#. Ma la spunta che abilita il crop praticamente abilita il plugin? cioè potrei usarlo solo per la parte SEO?
-#: ../inc/settings.php:47
-msgid "Cropping"
-msgstr "Ritaglio (Crop)"
-
-#: ../inc/settings.php:48
-msgid "Active"
-msgstr "Abilitato"
 
 #: 
 msgid "Crop qualities"
@@ -92,62 +79,13 @@ msgstr "Modifica qui le impostazioni SEO per le immagini"
 msgid "Supported expressions:"
 msgstr "Espressioni supportate"
 
-#: ../inc/settings.php:77
-msgid "Lorem ipsum cropping_is_active"
-msgstr "se flaggato il crop è abilitato"
-
-#: ../inc/settings.php:85
-msgid "Comma separated list of crop quality values"
-msgstr "Indica con valori separati da virgola la qualità di compressione (da 100 migliore a 50 media)"
-
-#: ../inc/settings.php:93
-msgid "Lorem ipsum imgseo_change_image_title"
-msgstr "se flaggato il titolo dell'immagine viene sostituito come indicato nel campo successivo"
-
-#: ../inc/settings.php:101
-msgid "Lorem ipsum imgseo_image_title_expression"
-msgstr "espressione usata per popolare il campo titolo, i valori accettati sono: [titolo], [tipofile], [tags], [categorie], [nome_sito]"
-
-#: ../inc/settings.php:109
-msgid "Lorem ipsum imgseo_change_image_alt"
-msgstr "se flaggato l'alt dell'immagine viene sostituito come indicato nel campo successivo"
-
-#: ../inc/settings.php:117
-msgid "Lorem ipsum imgseo_image_alt_expression"
-msgstr "espressione usata per popolare il campo alt, i valori accettati sono: [titolo], [tipofile], [tags], [categorie], [nome_sito]"
-
-#: ../inc/settings.php:125
-msgid "Lorem ipsum imgseo_change_image_filename"
-msgstr "se flaggato il nome file dell'immagine viene sostituito come indicato nel campo successivo"
-
-#: ../inc/settings.php:133
-msgid "Lorem ipsum imgseo_image_filename_expression"
-msgstr "espressione usata per popolare il nome file, i valori accettati sono: [titolo], [tipofile], [tags], [categorie], [nome_sito]"
-
 #: 
 msgid "Crop qualities value is not valid, using default:"
 msgstr "I valori indicati per la qualità non sono validi, verranno usati quelli di default"
 
-#: ../inc/settings.php:188
-msgid "imgseo_image_title_expression is not valid, using default:"
-msgstr "l'espressione usata per popolare il titolo non è valida, verrà usata quella di default:"
-
-#: ../inc/settings.php:194
-msgid "imgseo_image_alt_expression is not valid, using default:"
-msgstr "l'espressione usata per popolare l'alt non è valida, verrà usata quella di default:"
-
-#: ../inc/settings.php:200
-msgid "imgseo_image_filename_expression is not valid, using default:"
-msgstr "l'espressione usata per popolare il nome file non è valida, verrà usata quella di default:"
-
 #: 
 msgid "Close"
 msgstr "Chiudi"
-
-#. context? non sono riuscita a trovarla..
-#: ../inc/img-cropping/html/edit-image-size.php:44
-msgid "Edit cropped formats from full image"
-msgstr "Modifica i formati di crop dall'originale"
 
 #: 
 msgid "Current"
@@ -192,10 +130,6 @@ msgstr "Qualità del crop"
 #: 
 msgid "Crop"
 msgstr "Crop"
-
-#: ../inc/img-cropping/html/custom-sizes-table-rows.php:9
-msgid "Current theme defined sizes"
-msgstr "Il tema in uso imposta le dimensioni"
 
 #: 
 msgid "The sizes listed below are the crop and resize formats defined by "
@@ -317,4 +251,20 @@ msgstr "Modifica i formati di crop dall'originale"
 #: 
 msgid "Image sizes are defined by the current theme"
 msgstr "Il tema in uso imposta le dimensioni"
+
+#: 
+msgid "Retina cropping enabled"
+msgstr "Crop per retina abilitato"
+
+#: 
+msgid "This crop is too small to create the retina version of the image, you may replace the original image for this crop format using the replace button on the left and then crop it again."
+msgstr "Questo crop è troppo piccolo per poter creare la versione retina dell'immagine, prova a sostituire l'originale di questo crop usando il bottone sostituisci qui a sinistra e poi riprova ad effettuare il crop."
+
+#: 
+msgid "Retina friendly"
+msgstr "Retina compatibile"
+
+#: 
+msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
+msgstr "Seleziona questa casella per abilitare la compatibilità con i plugin retina (abilita questa opzione se stai usando un plugin che usa @2x come stringa convenzionale per nominare le immagini quando viene creata la versione retina - un esempio  <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
 

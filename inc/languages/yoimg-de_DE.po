@@ -27,10 +27,6 @@ msgstr "[Tags]"
 msgid "[categories]"
 msgstr "[Kategorien]"
 
-#: ../inc/utils.php:18
-msgid "Edit cropped formats"
-msgstr "Bild Ausschneiden"
-
 #: 
 msgid "YoImages settings"
 msgstr "Yo!mages Einstellungen"
@@ -38,14 +34,6 @@ msgstr "Yo!mages Einstellungen"
 #: 
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Sie haben keine Rechte diese Seite zu sehen."
-
-#: ../inc/settings.php:47
-msgid "Cropping"
-msgstr "Ausschnitt"
-
-#: ../inc/settings.php:48
-msgid "Active"
-msgstr "Einschalten"
 
 #: 
 msgid "Crop qualities"
@@ -91,61 +79,13 @@ msgstr "Bitte wähle Bild SEO Einstellungen hier"
 msgid "Supported expressions:"
 msgstr "benutzbar Formel"
 
-#: ../inc/settings.php:77
-msgid "Lorem ipsum cropping_is_active"
-msgstr "Wenn auswählt Ausschnitt ist einschaltet"
-
-#: ../inc/settings.php:85
-msgid "Comma separated list of crop quality values"
-msgstr "Ausschnitt Qualität Werte"
-
-#: ../inc/settings.php:93
-msgid "Lorem ipsum imgseo_change_image_title"
-msgstr "Wenn auswählt Bild Titel mit Title Formel hinstellen wird"
-
-#: ../inc/settings.php:101
-msgid "Lorem ipsum imgseo_image_title_expression"
-msgstr "Formel benutzt um Bild Titel zu hinstellen, verfügbar Werte sind: [Titel][Tags][web_site_Name][Typ][Kategorien]"
-
-#: ../inc/settings.php:109
-msgid "Lorem ipsum imgseo_change_image_alt"
-msgstr "Wenn auswählt Bild alt mit alt Formel hinstellen wird"
-
-#: ../inc/settings.php:117
-msgid "Lorem ipsum imgseo_image_alt_expression"
-msgstr "Formel benutzt um Bild alt zu hinstellen, verfügbar Werte sind: [Titel][Tags][web_site_Name][Typ][Kategorien]"
-
-#: ../inc/settings.php:125
-msgid "Lorem ipsum imgseo_change_image_filename"
-msgstr "Wenn auswählt Bild Feile Name mit Feile Name Formel hinstellen wird"
-
-#: ../inc/settings.php:133
-msgid "Lorem ipsum imgseo_image_filename_expression"
-msgstr "Formel benutzt um Bild Feile Name zu hinstellen, verfügbar Werte sind: [Titel][Tags][web_site_Name][Typ][Kategorien]"
-
 #: 
 msgid "Crop qualities value is not valid, using default:"
 msgstr "Ausschnitt Qualität Werte nicht gültig, standard wird benutzen sein "
 
-#: ../inc/settings.php:188
-msgid "imgseo_image_title_expression is not valid, using default:"
-msgstr "Titel Formel nicht gültig, standard wird benutzen"
-
-#: ../inc/settings.php:194
-msgid "imgseo_image_alt_expression is not valid, using default:"
-msgstr "Alt Formel nicht gültig, standard wird benutzen"
-
-#: ../inc/settings.php:200
-msgid "imgseo_image_filename_expression is not valid, using default:"
-msgstr "File Name Formel nicht gültig, standard wird benutzen"
-
 #: 
 msgid "Close"
 msgstr "beenden"
-
-#: ../inc/img-cropping/html/edit-image-size.php:44
-msgid "Edit cropped formats from full image"
-msgstr "Ausschnitt von Ursprünglichen Größe editieren"
 
 #: 
 msgid "Current"
@@ -190,10 +130,6 @@ msgstr "Ausschnitt Qualität"
 #: 
 msgid "Crop"
 msgstr "Ausschneiden"
-
-#: ../inc/img-cropping/html/custom-sizes-table-rows.php:9
-msgid "Current theme defined sizes"
-msgstr "aktiv Thema bestimmt die Größe"
 
 #: 
 msgid "The sizes listed below are the crop and resize formats defined by "
@@ -312,4 +248,20 @@ msgstr "Ausschnitt von Ursprünglichen Größe editieren"
 #: 
 msgid "Image sizes are defined by the current theme"
 msgstr "aktiv Thema bestimmt die Größe"
+
+#: 
+msgid "Retina cropping enabled"
+msgstr "Retina Ausschnitt einschalten"
+
+#: 
+msgid "This crop is too small to create the retina version of the image, you may replace the original image for this crop format using the replace button on the left and then crop it again."
+msgstr "Dieser Ausschnitt ist zu klein um retina Bild zu schaffen. Bitte hinstelle das Bild für diesen Ausschnitt mit hinstelle Button nach links und dann macht den ausschnitt wieder."
+
+#: 
+msgid "Retina friendly"
+msgstr "Retina Kompatibilität"
+
+#: 
+msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
+msgstr "Auswähle um es zu einschalten. (auswählen wenn Sie einen Plugin haben, der die Formel @2x um Feile Name zu setzen benutzt - z.B. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a> )"
 

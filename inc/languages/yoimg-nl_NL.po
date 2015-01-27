@@ -249,3 +249,19 @@ msgstr "Kies tabblad en bewerk uitsnede vanuit orginele afbeelding"
 msgid "Image sizes are defined by the current theme"
 msgstr "Afmetingen van afbeeldingen zijn bepaald door huidige thema"
 
+#: 
+msgid "Retina cropping enabled"
+msgstr "Retina uitsnede ingeschakeld "
+
+#: 
+msgid "This crop is too small to create the retina version of the image, you may replace the original image for this crop format using the replace button on the left and then crop it again."
+msgstr "Uitsnede kan niet worden gemaakt omdat originele afbeelding te klein is voor een Retina versie, Klik eventueel op de vervang-knop om de afbeelding te vervangen en opnieuw een uitsnede te maken. "
+
+#: 
+msgid "Retina friendly"
+msgstr "Retina geschikt "
+
+#: 
+msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
+msgstr "Selecteer om te activeren (activeer deze optie, bij gebruik van de Retina plugins welke gebruik maken van de @2x als bestandsnaam aanduiding, zoals bijvoorbeeld de plugin:  <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>) "
+

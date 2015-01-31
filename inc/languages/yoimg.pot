@@ -12,7 +12,7 @@ msgid "[title]"
 msgstr ""
 
 #: 
-msgid "[type]"
+msgid "[post_type]"
 msgstr ""
 
 #: 
@@ -104,11 +104,11 @@ msgid "Current"
 msgstr ""
 
 #: 
-msgid "This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace the original image for this crop format using the replace button here below and then cropping it"
+msgid "This crop is smaller than expected, you may replace the original image for this crop format using the replace button on the left and then cropping it"
 msgstr ""
 
 #: 
-msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
+msgid "Crop cannot be generated because original image is too small, actual image size will be used, but you may want to replace the original image for this crop format using the replace button on the left"
 msgstr ""
 
 #: 

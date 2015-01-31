@@ -28,6 +28,18 @@ msgid "[categories]"
 msgstr ""
 
 #: 
+msgid "[author_username]"
+msgstr ""
+
+#: 
+msgid "[author_firstname]"
+msgstr ""
+
+#: 
+msgid "[author_lastname]"
+msgstr ""
+
+#: 
 msgid "YoImages settings"
 msgstr ""
 

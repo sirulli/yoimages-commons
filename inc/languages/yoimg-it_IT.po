@@ -12,7 +12,7 @@ msgid "[title]"
 msgstr "[titolo]"
 
 #: 
-msgid "[type]"
+msgid "[post_type]"
 msgstr "[tipo_post]"
 
 #: 
@@ -92,11 +92,11 @@ msgid "Current"
 msgstr "Attuale"
 
 #: 
-msgid "This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace the original image for this crop format using the replace button here below and then cropping it"
+msgid "This crop is smaller than expected, you may replace the original image for this crop format using the replace button on the left and then cropping it"
 msgstr "Questo crop è più piccolo di quello che serve, prova a sostituire l'immagine originale cliccando sul bottone sostituisci qui accanto"
 
 #: 
-msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
+msgid "Crop cannot be generated because original image is too small, actual image size will be used, but you may want to replace the original image for this crop format using the replace button on the left"
 msgstr "Non è stato possibile generare il crop perché l'immagine originale è troppo piccola, verrà usata l'immagine nelle sue dimensioni attuali, ti consigliamo di sostituire l'immagine originale cliccando sul bottone sostituisci qui accanto"
 
 #: 
@@ -267,4 +267,16 @@ msgstr "Retina compatibile"
 #: 
 msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
 msgstr "Seleziona questa casella per abilitare la compatibilità con i plugin retina (abilita questa opzione se stai usando un plugin che usa @2x come stringa convenzionale per nominare le immagini quando viene creata la versione retina - un esempio  <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
+
+#: 
+msgid "[author_username]"
+msgstr "[nomeutente_autore]"
+
+#: 
+msgid "[author_firstname]"
+msgstr "[nome_autore]"
+
+#: 
+msgid "[author_lastname]"
+msgstr "[cognome_autore]"
 

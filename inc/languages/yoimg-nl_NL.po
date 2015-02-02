@@ -12,7 +12,7 @@ msgid "[title]"
 msgstr "[title]"
 
 #: 
-msgid "[type]"
+msgid "[post_type]"
 msgstr "[post_type]"
 
 #: 
@@ -92,11 +92,11 @@ msgid "Current"
 msgstr "Huidig"
 
 #: 
-msgid "This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace the original image for this crop format using the replace button here below and then cropping it"
+msgid "This crop is smaller than expected, you may replace the original image for this crop format using the replace button on the left and then cropping it"
 msgstr "De uitsnede is kleiner dan verwacht. U mag de originele afbeelding vervangen door de VERVANG-knop te gebruiken en daarna een uitsnede te maken"
 
 #: 
-msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
+msgid "Crop cannot be generated because original image is too small, actual image size will be used, but you may want to replace the original image for this crop format using the replace button on the left"
 msgstr "Uitsnede kan niet worden gemaakt omdat originele afbeelding te klein is, daarom zal originele afbeelding worden gebruikt. Klik op de vervang-knop om de afbeelding te vervangen"
 
 #: 
@@ -259,9 +259,21 @@ msgstr "Uitsnede kan niet worden gemaakt omdat originele afbeelding te klein is 
 
 #: 
 msgid "Retina friendly"
-msgstr "Retina geschikt "
+msgstr "Retina kwaliteit "
 
 #: 
 msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
-msgstr "Selecteer om te activeren (activeer deze optie, bij gebruik van de Retina plugins welke gebruik maken van de @2x als bestandsnaam aanduiding, zoals bijvoorbeeld de plugin:  <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>) "
+msgstr "Indien aangevinkt is Retina kwaliteit actief. Activeer deze optie alleen bij gebruik van een Retina plugin, zoals bijvoorbeeld:  <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>, welke gebruik maakt van @2x in de bestandsnaam. "
+
+#: 
+msgid "[author_username]"
+msgstr "[author_username]"
+
+#: 
+msgid "[author_firstname]"
+msgstr "[author_firstname]"
+
+#: 
+msgid "[author_lastname]"
+msgstr "[author_lastname]"
 

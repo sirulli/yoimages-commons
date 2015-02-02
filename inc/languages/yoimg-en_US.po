@@ -12,7 +12,7 @@ msgid "[title]"
 msgstr "[title]"
 
 #: 
-msgid "[type]"
+msgid "[post_type]"
 msgstr "[post_type]"
 
 #: 
@@ -92,11 +92,11 @@ msgid "Current"
 msgstr "Current"
 
 #: 
-msgid "This crop is smaller (%1$sx%2$s) than expected (%3$sx%4$s), you may replace the original image for this crop format using the replace button here below and then cropping it"
+msgid "This crop is smaller than expected, you may replace the original image for this crop format using the replace button on the left and then cropping it"
 msgstr "This crop is smaller than expected, you may replace the original image for this crop format using the replace button on the left and then cropping it"
 
 #: 
-msgid "Crop cannot be generated because original image is too small, you may replace the original image for this crop format using the replace button here below"
+msgid "Crop cannot be generated because original image is too small, actual image size will be used, but you may want to replace the original image for this crop format using the replace button on the left"
 msgstr "Crop cannot be generated because original image is too small, actual image size will be used, but you may want to replace the original image for this crop format using the replace button on the left"
 
 #: 
@@ -264,4 +264,16 @@ msgstr "Retina friendly "
 #: 
 msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
 msgstr "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>) "
+
+#: 
+msgid "[author_username]"
+msgstr "[author_username]"
+
+#: 
+msgid "[author_firstname]"
+msgstr "[author_firstname]"
+
+#: 
+msgid "[author_lastname]"
+msgstr "[author_lastname]"
 

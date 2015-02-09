@@ -6,7 +6,7 @@ if (! defined ( 'ABSPATH' )) {
 if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 
 	define ( 'YOIMG_COMMONS_PATH', dirname ( __FILE__ ) );
-	define ( 'YOIMG_SUPPORTED_LOCALES', 'en_US it_IT de_DE nl_NL' ); 
+	define ( 'YOIMG_SUPPORTED_LOCALES', 'en_US it_IT de_DE nl_NL fr_FR' ); 
 	
 	require_once (YOIMG_COMMONS_PATH . '/utils.php');
 	

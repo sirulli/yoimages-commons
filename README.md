@@ -14,3 +14,4 @@ YoImages Commons cannot be installed as a stand alone plugin but it is included 
 * [YoImages] (https://github.com/sirulli/yoimages "")
 * [YoImages Crop] (https://github.com/sirulli/yoimages-crop "")
 * [YoImages SEO] (https://github.com/sirulli/yoimages-seo "")
+* [YoImages Search] (https://github.com/sirulli/yoimages-search "")

@@ -9,6 +9,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		
 		private $crop_options;
 		private $seo_options;
+		private $search_options;
 		
 		public function __construct() {
 			add_action ( 'admin_menu', array ( $this, 'add_plugin_page_menu_item' ) );
@@ -27,6 +28,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			global $yoimg_plugins_url;
 			$this->crop_options = get_option( 'yoimg_crop_settings' );
 			$this->seo_options = get_option( 'yoimg_seo_settings' );
+			$this->search_options = get_option( 'yoimg_search_settings' );
 			?>
 			<div class="wrap" id="yoimg-settings-wrapper">
 				<h2><?php _e( 'YoImages settings', YOIMG_DOMAIN ); ?></h2>
@@ -48,6 +50,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 				<h2 class="nav-tab-wrapper">
 					<a href="?page=yoimg-settings&tab=yoimages-crop" class="nav-tab <?php echo $active_tab == 'yoimages-crop' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Crop settings', YOIMG_DOMAIN ); ?></a>
 					<a href="?page=yoimg-settings&tab=yoimages-seo" class="nav-tab <?php echo $active_tab == 'yoimages-seo' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'SEO for images', YOIMG_DOMAIN ); ?></a>
+					<a href="?page=yoimg-settings&tab=yoimages-search" class="nav-tab <?php echo $active_tab == 'yoimages-search' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'Images search settings', YOIMG_DOMAIN ); ?></a>
 				</h2>
 				<?php
 				if ( isset( $yoimg_modules[$active_tab] ) && $yoimg_modules[$active_tab]['has-settings'] ) {
@@ -87,6 +90,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		public function init_admin_page() {
 			register_setting( 'yoimages-crop-group', 'yoimg_crop_settings', array( $this, 'sanitize_crop' ) );
 			register_setting( 'yoimages-seo-group', 'yoimg_seo_settings', array( $this, 'sanitize_seo' ) );
+			register_setting( 'yoimages-search-group', 'yoimg_search_settings', array( $this, 'sanitize_search' ) );
 			
 			add_settings_section( 'yoimg_crop_options_section', __( 'Crop settings', YOIMG_DOMAIN ), array( $this, 'print_crop_options_section_info' ), 'yoimages-crop' );
 			add_settings_field( 'cropping_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
@@ -101,6 +105,9 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			add_settings_field( 'imgseo_change_image_filename', __( 'Change image file name', YOIMG_DOMAIN ), array( $this, 'imgseo_change_image_filename_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			add_settings_field( 'imgseo_image_filename_expression', __( 'Image file name expression', YOIMG_DOMAIN), array( $this, 'imgseo_image_filename_expression_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			
+			add_settings_section( 'yoimg_search_options_section', __( 'Search settings', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
+			add_settings_field( 'search_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'search_is_active_callback' ), 'yoimages-search', 'yoimg_search_options_section' );
+			
 		}
 		
 		public function print_crop_options_section_info() {
@@ -113,6 +120,10 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 				__( 'Supported expressions:', YOIMG_DOMAIN ) . ' ' . implode( ', ', apply_filters( 'yoimg_supported_expressions', array() ) )
 				. '</p>'
 			);
+		}
+		
+		public function print_search_options_section_info() {
+			print __('Enter your images search settings here below', YOIMG_DOMAIN );
 		}
 		
 		public function cropping_is_active_callback() {
@@ -187,6 +198,14 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			);
 		}
 	
+		public function search_is_active_callback() {
+			printf(
+			'<input type="checkbox" id="search_is_active" name="yoimg_search_settings[search_is_active]" value="TRUE" %s />
+				<p class="description">' . __( 'If checked images search is active', YOIMG_DOMAIN ) . '</p>',
+						$this->search_options['search_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_SEARCH_ENABLED && ! isset( $this->search_options['search_is_active'] ) ? 'checked="checked"' : '' )
+			);
+		}
+		
 		public function sanitize_crop( $input ) {
 			$new_input = array();
 			if( $input['cropping_is_active'] === 'TRUE' || $input['cropping_is_active'] === TRUE ) {
@@ -265,6 +284,16 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			return $new_input;
 		}
 	
+		public function sanitize_search( $input ) {
+			$new_input = array();
+			if( $input['search_is_active'] === 'TRUE' || $input['search_is_active'] === TRUE ) {
+				$new_input['search_is_active'] = TRUE;
+			} else {
+				$new_input['search_is_active'] = FALSE;
+			}
+			return $new_input;
+		}
+		
 	}
 	
 	new YoImagesSettingsPage();

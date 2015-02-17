@@ -17,7 +17,8 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 		global $yoimg_plugins_url;
 		$yoimg_plugins_url = array (
 			'yoimages-crop' => 'https://github.com/sirulli/yoimages-crop',
-			'yoimages-seo' => 'https://github.com/sirulli/yoimages-seo'
+			'yoimages-seo' => 'https://github.com/sirulli/yoimages-seo',
+			'yoimages-search' => 'https://github.com/sirulli/yoimages-search'
 		);
 		
 		define ( 'YOIMG_DOMAIN', 'yoimg' );

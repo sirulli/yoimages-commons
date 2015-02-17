@@ -277,4 +277,20 @@ msgstr ""
 msgid "Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href=\"https://wordpress.org/plugins/wp-retina-2x/\" target=\"_blank\">WP Retina 2x</a>)"
 msgstr ""
 
+#:
+msgid "Images search settings"
+msgstr ""
+
+#:
+msgid "Search settings"
+msgstr ""
+
+#:
+msgid "Enter your images search settings here below"
+msgstr ""
+
+#:
+msgid "If checked images search is active"
+msgstr ""
+
 

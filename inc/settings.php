@@ -105,7 +105,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			add_settings_field( 'imgseo_change_image_filename', __( 'Change image file name', YOIMG_DOMAIN ), array( $this, 'imgseo_change_image_filename_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			add_settings_field( 'imgseo_image_filename_expression', __( 'Image file name expression', YOIMG_DOMAIN), array( $this, 'imgseo_image_filename_expression_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			
-			add_settings_section( 'yoimg_search_options_section', __( 'Search settings', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
+			add_settings_section( 'yoimg_search_options_section', __( 'Images search settings', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
 			add_settings_field( 'search_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'search_is_active_callback' ), 'yoimages-search', 'yoimg_search_options_section' );
 			
 		}

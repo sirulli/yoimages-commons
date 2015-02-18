@@ -282,10 +282,6 @@ msgid "Images search settings"
 msgstr ""
 
 #:
-msgid "Search settings"
-msgstr ""
-
-#:
 msgid "Enter your images search settings here below"
 msgstr ""
 

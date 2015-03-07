@@ -189,7 +189,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 	
 		public function sanitize_crop( $input ) {
 			$new_input = array();
-			if( $input['cropping_is_active'] === 'TRUE' || $input['cropping_is_active'] === TRUE ) {
+			if( isset( $input['cropping_is_active'] ) && ( $input['cropping_is_active'] === 'TRUE' || $input['cropping_is_active'] === TRUE ) ) {
 				$new_input['cropping_is_active'] = TRUE;
 			} else {
 				$new_input['cropping_is_active'] = FALSE;
@@ -219,7 +219,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			} else {
 				$new_input['crop_qualities'] = unserialize( YOIMG_DEFAULT_CROP_QUALITIES );
 			}
-			if( $input['retina_cropping_is_active'] === 'TRUE' || $input['retina_cropping_is_active'] === TRUE ) {
+			if( isset( $input['retina_cropping_is_active'] )  && ( $input['retina_cropping_is_active'] === 'TRUE' || $input['retina_cropping_is_active'] === TRUE ) ) {
 				$new_input['retina_cropping_is_active'] = TRUE;
 			} else {
 				$new_input['retina_cropping_is_active'] = FALSE;
@@ -229,17 +229,17 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 	
 		public function sanitize_seo( $input ) {
 			$new_input = array();
-			if( $input['imgseo_change_image_title'] === 'TRUE' || $input['imgseo_change_image_title'] === TRUE ) {
+			if( isset( $input['imgseo_change_image_title'] ) && ( $input['imgseo_change_image_title'] === 'TRUE' || $input['imgseo_change_image_title'] === TRUE ) ) {
 				$new_input['imgseo_change_image_title'] = TRUE;
 			} else {
 				$new_input['imgseo_change_image_title'] = FALSE;
 			}
-			if( $input['imgseo_change_image_alt'] === 'TRUE' || $input['imgseo_change_image_alt'] === TRUE ) {
+			if( isset( $input['imgseo_change_image_alt'] ) && ( $input['imgseo_change_image_alt'] === 'TRUE' || $input['imgseo_change_image_alt'] === TRUE ) ) {
 				$new_input['imgseo_change_image_alt'] = TRUE;
 			} else {
 				$new_input['imgseo_change_image_alt'] = FALSE;
 			}
-			if( $input['imgseo_change_image_filename'] === 'TRUE' || $input['imgseo_change_image_filename'] === TRUE ) {
+			if( isset( $input['imgseo_change_image_filename'] ) && ( $input['imgseo_change_image_filename'] === 'TRUE' || $input['imgseo_change_image_filename'] === TRUE ) ) {
 				$new_input['imgseo_change_image_filename'] = TRUE;
 			} else {
 				$new_input['imgseo_change_image_filename'] = FALSE;

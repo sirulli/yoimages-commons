@@ -286,7 +286,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 	
 		public function sanitize_search( $input ) {
 			$new_input = array();
-			if( $input['search_is_active'] === 'TRUE' || $input['search_is_active'] === TRUE ) {
+			if( isset( $input['search_is_active'] ) && ( $input['search_is_active'] === 'TRUE' || $input['search_is_active'] === TRUE ) ) {
 				$new_input['search_is_active'] = TRUE;
 			} else {
 				$new_input['search_is_active'] = FALSE;

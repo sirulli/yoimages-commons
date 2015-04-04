@@ -7,25 +7,30 @@ msgstr ""
 "Project-Id-Version: YoImages\n"
 "Language: de\n"
 
+#. @Thomas we have to revert this change because it's likely possible that some active installations of the plugin is already using the previous version of the shortcode and changing it would require that the plugin users update their own SEO settings
 #: 
 msgid "[title]"
-msgstr "[title]"
+msgstr "[Titel]"
 
+#. @Thomas we have to revert this change because it's likely possible that some active installations of the plugin is already using the previous version of the shortcode and changing it would require that the plugin users update their own SEO settings
 #: 
 msgid "[post_type]"
-msgstr "[post_type]"
+msgstr "[Typ]"
 
+#. @Thomas we have to revert this change because it's likely possible that some active installations of the plugin is already using the previous version of the shortcode and changing it would require that the plugin users update their own SEO settings
 #: 
 msgid "[site_name]"
-msgstr "[site_name]"
+msgstr "[web_site_Name]"
 
+#. @Thomas we have to revert this change because it's likely possible that some active installations of the plugin is already using the previous version of the shortcode and changing it would require that the plugin users update their own SEO settings
 #: 
 msgid "[tags]"
-msgstr "[tags]"
+msgstr "[Tags]"
 
+#. @Thomas we have to revert this change because it's likely possible that some active installations of the plugin is already using the previous version of the shortcode and changing it would require that the plugin users update their own SEO settings
 #: 
 msgid "[categories]"
-msgstr "[categories]"
+msgstr "[Kategorien]"
 
 #: 
 msgid "YoImages settings"

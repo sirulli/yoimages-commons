@@ -50,7 +50,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 				<h2 class="nav-tab-wrapper">
 					<a href="?page=yoimg-settings&tab=yoimages-crop" class="nav-tab <?php echo $active_tab == 'yoimages-crop' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Crop settings', YOIMG_DOMAIN ); ?></a>
 					<a href="?page=yoimg-settings&tab=yoimages-seo" class="nav-tab <?php echo $active_tab == 'yoimages-seo' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'SEO for images', YOIMG_DOMAIN ); ?></a>
-					<a href="?page=yoimg-settings&tab=yoimages-search" class="nav-tab <?php echo $active_tab == 'yoimages-search' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'Images search settings', YOIMG_DOMAIN ); ?></a>
+					<a href="?page=yoimg-settings&tab=yoimages-search" class="nav-tab <?php echo $active_tab == 'yoimages-search' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'Free stock images search', YOIMG_DOMAIN ); ?></a>
 				</h2>
 				<?php
 				if ( isset( $yoimg_modules[$active_tab] ) && $yoimg_modules[$active_tab]['has-settings'] ) {
@@ -105,7 +105,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			add_settings_field( 'imgseo_change_image_filename', __( 'Change image file name', YOIMG_DOMAIN ), array( $this, 'imgseo_change_image_filename_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			add_settings_field( 'imgseo_image_filename_expression', __( 'Image file name expression', YOIMG_DOMAIN), array( $this, 'imgseo_image_filename_expression_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
 			
-			add_settings_section( 'yoimg_search_options_section', __( 'Images search settings', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
+			add_settings_section( 'yoimg_search_options_section', __( 'Free stock images search', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
 			add_settings_field( 'search_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'search_is_active_callback' ), 'yoimages-search', 'yoimg_search_options_section' );
 			
 		}
@@ -123,7 +123,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		}
 		
 		public function print_search_options_section_info() {
-			print __('Enter your images search settings here below', YOIMG_DOMAIN );
+			print __('Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href="http://www.splashbase.co/" target="_blank">www.splashbase.co</a>, see Splashbase T&C for more info.', YOIMG_DOMAIN );
 		}
 		
 		public function cropping_is_active_callback() {
@@ -201,7 +201,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		public function search_is_active_callback() {
 			printf(
 			'<input type="checkbox" id="search_is_active" name="yoimg_search_settings[search_is_active]" value="TRUE" %s />
-				<p class="description">' . __( 'If checked images search is active', YOIMG_DOMAIN ) . '</p>',
+				<p class="description">' . __( 'If checked free stock images search is active', YOIMG_DOMAIN ) . '</p>',
 						$this->search_options['search_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_SEARCH_ENABLED && ! isset( $this->search_options['search_is_active'] ) ? 'checked="checked"' : '' )
 			);
 		}

@@ -278,15 +278,33 @@ msgid "Flag to enable (enable this option if you are using a retina plugin that 
 msgstr ""
 
 #:
-msgid "Images search settings"
+msgid "Free stock images search"
 msgstr ""
 
 #:
-msgid "Enter your images search settings here below"
+msgid "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href="http://www.splashbase.co/" target="_blank">www.splashbase.co</a>, see Splashbase T&C for more info."
 msgstr ""
 
 #:
-msgid "If checked images search is active"
+msgid "If checked free stock images search is active"
 msgstr ""
 
+#:
+msgid "Search"
+msgstr ""
 
+#:
+msgid "Upload"
+msgstr ""
+
+#:
+msgid "Search free stock images from www.splashbase.co"
+msgstr ""
+
+#:
+msgid "No results for:"
+msgstr ""
+
+#:
+msgid "An error has occurred, please try again later or check the console logs for further information"
+msgstr ""

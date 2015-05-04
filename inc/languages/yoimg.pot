@@ -308,3 +308,15 @@ msgstr ""
 #:
 msgid "An error has occurred, please try again later or check the console logs for further information"
 msgstr ""
+
+#:
+msgid "copyright"
+msgstr ""
+
+#:
+msgid "site"
+msgstr ""
+
+#:
+msgid "via"
+msgstr ""

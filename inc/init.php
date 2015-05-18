@@ -10,7 +10,7 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 	
 	require_once (YOIMG_COMMONS_PATH . '/utils.php');
 	
-	if (is_admin ()) {
+	if (is_admin () || php_sapi_name () == 'cli') {
 	
 		define ( 'YOIMG_COMMONS_URL', plugins_url ( plugin_basename ( YOIMG_COMMONS_PATH ) ) );
 		

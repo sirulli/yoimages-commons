@@ -277,3 +277,47 @@ msgstr "[author_firstname]"
 msgid "[author_lastname]"
 msgstr "[author_lastname]"
 
+#: 
+msgid "Free stock images search"
+msgstr "Gratis stock images zoeken"
+
+#: 
+msgid "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href=\"http://www.splashbase.co/\" target=\"_blank\">www.splashbase.co</a>, see Splashbase T&C for more info."
+msgstr "Gratis stock images zoeken instellingen. <br/>Opmerking, er zal op basis van Engelse taal worden gezocht. Dus maak gebruik van Engelse zoekterm(en).<br/>Images source: <a href=\"http://www.splashbase.co/\" target=\"_blank\">www.splashbase.co</a>, Kijk op Splashbase T&C voor meer informatie. "
+
+#: 
+msgid "If checked free stock images search is active"
+msgstr "Indien aangevinkt is zoeken naar stock images actief"
+
+#: 
+msgid "Search"
+msgstr "Zoeken"
+
+#: 
+msgid "Upload"
+msgstr "Upload"
+
+#: 
+msgid "Search free stock images from www.splashbase.co"
+msgstr "Zoek gratis stock images op www.splashbase.co"
+
+#: 
+msgid "No results for:"
+msgstr "Geen resultaten voor:"
+
+#: 
+msgid "An error has occurred, please try again later or check the console logs for further information"
+msgstr "Er is een fout ontstaan, probeer het later nogmaals. Blijft probleem bestaan, controleer dan de logbestanden voor meer informatie."
+
+#: 
+msgid "via"
+msgstr "via"
+
+#: 
+msgid "site"
+msgstr "webpagina"
+
+#: 
+msgid "copyright"
+msgstr "copyright"
+

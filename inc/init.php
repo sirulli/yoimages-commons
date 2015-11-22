@@ -40,12 +40,13 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 
 	function filter_yoimg_meta( $links, $file ) {
 		global $yoimg_modules;
-		$file_base_dir = plugin_dir_path( $file );
+		$file_base_dir = explode( '/', plugin_dir_path( $file ))[0];
 		$plugin_slug = explode( '/', plugin_basename( YOIMG_COMMONS_PATH ) )[0];
-		if ( $file_base_dir == $plugin_slug . '/' ) {
+		$is_yoimg_module_w_settings = isset($yoimg_modules[$file_base_dir]['has-settings']) && $yoimg_modules[$file_base_dir]['has-settings'];
+		if ( $file_base_dir == $plugin_slug || $is_yoimg_module_w_settings ) {
 			$plugin_settings_link = 'options-general.php?page=yoimg-settings';
-			if ( isset($yoimg_modules[$plugin_slug]['has-settings']) && $yoimg_modules[$plugin_slug]['has-settings'] ) {
-				$plugin_settings_link .= '&tab=' . $plugin_slug; 
+			if ( $is_yoimg_module_w_settings ) {
+				$plugin_settings_link .= '&tab=' . $file_base_dir; 
 			}
 			array_push( $links, '<a href="' . $plugin_settings_link . '">'. __( 'Settings' ) .'</a>' );
 		}

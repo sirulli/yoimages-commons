@@ -6,7 +6,7 @@ if (! defined ( 'ABSPATH' )) {
 if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 
 	define ( 'YOIMG_COMMONS_PATH', dirname ( __FILE__ ) );
-	define ( 'YOIMG_SUPPORTED_LOCALES', 'en_US it_IT de_DE nl_NL fr_FR' ); 
+	define ( 'YOIMG_SUPPORTED_LOCALES', 'en_US it_IT de_DE nl_NL fr_FR pl_PL' ); 
 	
 	require_once (YOIMG_COMMONS_PATH . '/utils.php');
 	
@@ -39,8 +39,15 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 	}
 
 	function filter_yoimg_meta( $links, $file ) {
-		if ( $file == plugin_basename( __FILE__ ) ) {
-			array_unshift( $links, '<a href="options-general.php?page=yoimg-settings">'. __( 'Settings' ) .'</a>' );
+		global $yoimg_modules;
+		$file_base_dir = plugin_dir_path( $file );
+		$plugin_slug = explode( '/', plugin_basename( YOIMG_COMMONS_PATH ) )[0];
+		if ( $file_base_dir == $plugin_slug . '/' ) {
+			$plugin_settings_link = 'options-general.php?page=yoimg-settings';
+			if ( isset($yoimg_modules[$plugin_slug]['has-settings']) && $yoimg_modules[$plugin_slug]['has-settings'] ) {
+				$plugin_settings_link .= '&tab=' . $plugin_slug; 
+			}
+			array_push( $links, '<a href="' . $plugin_settings_link . '">'. __( 'Settings' ) .'</a>' );
 		}
 		return $links;
 	}

@@ -38,4 +38,16 @@ if ( ! defined( 'YOIMG_COMMONS_PATH' ) ) {
 		add_action ( 'admin_enqueue_scripts', 'yoimg_settings_load_styles_and_scripts' );
 	}
 
+	function filter_yoimg_meta( $links, $file ) {
+		if ( $file == plugin_basename( __FILE__ ) ) {
+			array_unshift( $links, '<a href="options-general.php?page=yoimg-settings">'. __( 'Settings' ) .'</a>' );
+		}
+		return $links;
+	}
+	global $wp_version;
+	if ( version_compare( $wp_version, '2.8alpha', '>' ) ) {
+		add_filter( 'plugin_row_meta', 'filter_yoimg_meta', 10, 2 );
+	}
+	add_filter( 'plugin_action_links', 'filter_yoimg_meta', 10, 2 );
+
 }

@@ -123,7 +123,17 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		}
 		
 		public function print_search_options_section_info() {
-			print __('Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href="http://www.splashbase.co/" target="_blank">www.splashbase.co</a>, see Splashbase T&C for more info.', YOIMG_DOMAIN );
+			global $yoimg_search_providers;
+			print __('Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.', YOIMG_DOMAIN );
+			print '<br /><br />';
+			print __('Images sources:', YOIMG_DOMAIN );
+			print '<ul>';
+			foreach ( $yoimg_search_providers as $yoimg_search_provider ) {
+				print '<li><a href="' . $yoimg_search_provider['url'] . '" target="_blank">' . $yoimg_search_provider['name'] . '</a>,';
+				print __('see T&C for more info.', YOIMG_DOMAIN );
+				print '</li>';
+			}
+			print '</ul>';
 		}
 		
 		public function cropping_is_active_callback() {

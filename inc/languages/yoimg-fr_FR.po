@@ -277,3 +277,107 @@ msgstr "[author_firstname]"
 msgid "[author_lastname]"
 msgstr "[author_lastname]"
 
+#: 
+msgid "Free stock images search"
+msgstr "Free stock images search"
+
+#: 
+msgid "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href=\"http://www.splashbase.co/\" target=\"_blank\">www.splashbase.co</a>, see Splashbase T&C for more info."
+msgstr "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.<br/>Images source: <a href=\"http://www.splashbase.co/\" target=\"_blank\">www.splashbase.co</a>, see Splashbase T&C for more info."
+
+#: 
+msgid "If checked free stock images search is active"
+msgstr "If checked free stock images search is active"
+
+#: 
+msgid "Search"
+msgstr "Search"
+
+#: 
+msgid "Upload"
+msgstr "Upload"
+
+#: 
+msgid "Search free stock images from www.splashbase.co"
+msgstr "Search free stock images from www.splashbase.co"
+
+#: 
+msgid "No results for:"
+msgstr "No results for:"
+
+#: 
+msgid "An error has occurred, please try again later or check the console logs for further information"
+msgstr "An error has occurred, please try again later or check the console logs for further information"
+
+#: 
+msgid "via"
+msgstr "via"
+
+#: 
+msgid "site"
+msgstr "site"
+
+#: 
+msgid "copyright"
+msgstr "copyright"
+
+#: 
+msgid "author"
+msgstr "author"
+
+#: 
+msgid "source"
+msgstr "source"
+
+#: 
+msgid "Cannot get results from:"
+msgstr "Cannot get results from:"
+
+#: 
+msgid "Search free stock images from"
+msgstr "Search free stock images from"
+
+#: 
+msgid "The uploaded file could not be moved to %s."
+msgstr "The uploaded file could not be moved to %s."
+
+#: 
+msgid "The uploaded file is not a valid image. Please try again."
+msgstr "The uploaded file is not a valid image. Please try again."
+
+#: 
+msgid "Close crop panel"
+msgstr "Close crop panel"
+
+#: 
+msgid "see T&C for more info."
+msgstr "see T&C for more info."
+
+#: 
+msgid "Images sources:"
+msgstr "Images sources:"
+
+#: 
+msgid "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms."
+msgstr "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms."
+
+#: 
+msgid "Unknown module"
+msgstr "Unknown module"
+
+#: 
+msgid "This YoImages' module is not active or installed, please activate it in the plugins administration page or install it from here:"
+msgstr "This YoImages' module is not active or installed, please activate it in the plugins administration page or install it from here:"
+
+#: 
+msgid "You are trying to access a YoImages' module that has no settings page"
+msgstr "You are trying to access a YoImages' module that has no settings page"
+
+#: 
+msgid "Settings"
+msgstr "Settings"
+
+#: 
+msgid "Page"
+msgstr "Page"
+

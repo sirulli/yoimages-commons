@@ -326,3 +326,63 @@ msgstr "Website"
 msgid "copyright"
 msgstr "Copyright"
 
+#: 
+msgid "author"
+msgstr "Autor"
+
+#: 
+msgid "source"
+msgstr "Quelle"
+
+#: 
+msgid "Cannot get results from:"
+msgstr "Kann nicht Treffer schauen"
+
+#: 
+msgid "Search free stock images from"
+msgstr "Suche Kostenlose Lizenzfreie Bildern"
+
+#: 
+msgid "The uploaded file could not be moved to %s."
+msgstr "Die hochgeladene Datei konnte nicht verschoben werden zu %s"
+
+#: 
+msgid "The uploaded file is not a valid image. Please try again."
+msgstr "Die hochgeladene Datei ist keine gültige Bilder. Bitte versuche es noch einmal. "
+
+#: 
+msgid "Close crop panel"
+msgstr "Schließe Beschnitt Fenster"
+
+#: 
+msgid "see T&C for more info."
+msgstr "Bitte lese AGB für weitere Informationen"
+
+#: 
+msgid "Images sources:"
+msgstr "Quelle von die Bilder"
+
+#: 
+msgid "Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms."
+msgstr "Kostenlose Lizenzfreie Bilder Suche Einstellungen. </br>Bitte bemerkt dass Suche sind auf Englisch daher benutze englische Wörter"
+
+#: 
+msgid "Unknown module"
+msgstr "Unbekannte Modul"
+
+#: 
+msgid "This YoImages' module is not active or installed, please activate it in the plugins administration page or install it from here:"
+msgstr "Dieser YoImages Modul ist nicht aktiv oder einsetzt. Bitte aktivieren Sie in dem Einstellungen Seite der Plugin oder einsetzte es von hier:"
+
+#: 
+msgid "You are trying to access a YoImages' module that has no settings page"
+msgstr "Der YoImages Modul dass du zugreifen möchetest hat keine Einstellung Seite"
+
+#: 
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: 
+msgid "Page"
+msgstr "Seite"
+

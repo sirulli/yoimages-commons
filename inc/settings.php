@@ -7,7 +7,6 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 
 	class YoImagesSettingsPage {
 		
-		private $crop_options;
 		private $seo_options;
 		private $search_options;
 		
@@ -26,9 +25,9 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			}
 			global $yoimg_modules;
 			global $yoimg_plugins_url;
-			$this->crop_options = get_option( 'yoimg_crop_settings' );
 			$this->seo_options = get_option( 'yoimg_seo_settings' );
 			$this->search_options = get_option( 'yoimg_search_settings' );
+			$settings = apply_filters( 'yoimg_settings', array() );
 			?>
 			<div class="wrap" id="yoimg-settings-wrapper">
 				<h2><?php _e( 'YoImages settings', YOIMG_DOMAIN ); ?></h2>
@@ -43,12 +42,19 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 						}
 					}
 					if ( ! isset( $active_tab ) ) {
-						$active_tab = 'yoimages-crop';
+						$active_tab = $settings[0]['option']['page'];
 					}
 				}
 				?>
 				<h2 class="nav-tab-wrapper">
-					<a href="?page=yoimg-settings&tab=yoimages-crop" class="nav-tab <?php echo $active_tab == 'yoimages-crop' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Crop settings', YOIMG_DOMAIN ); ?></a>
+					<?php
+					foreach ( $settings as $setting ) {
+						$option_page = $setting['option']['page'];
+					?>
+						<a href="?page=yoimg-settings&tab=<?php echo $option_page; ?>" class="nav-tab <?php echo $active_tab == $option_page ? 'nav-tab-active' : ''; ?>"><?php echo $setting['option']['title']; ?></a>
+					<?php
+					}
+					?>
 					<a href="?page=yoimg-settings&tab=yoimages-seo" class="nav-tab <?php echo $active_tab == 'yoimages-seo' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'SEO for images', YOIMG_DOMAIN ); ?></a>
 					<a href="?page=yoimg-settings&tab=yoimages-search" class="nav-tab <?php echo $active_tab == 'yoimages-search' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'Free stock images search', YOIMG_DOMAIN ); ?></a>
 				</h2>
@@ -88,14 +94,21 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 		}
 	
 		public function init_admin_page() {
-			register_setting( 'yoimages-crop-group', 'yoimg_crop_settings', array( $this, 'sanitize_crop' ) );
+			$settings = apply_filters( 'yoimg_settings', array() );
+			foreach ( $settings as $setting ) {
+				$option_page = $setting['option']['page'];
+				register_setting( $setting['option']['option_group'], $setting['option']['option_name'], $setting['option']['sanitize_callback'] );
+				foreach ( $setting['option']['sections'] as $section ) {
+					$section_id = $section['id'];
+					add_settings_section( $section_id, $section['title'], $section['callback'], $option_page );
+					foreach ( $section['fields'] as $field ) {
+						add_settings_field( $field['id'], $field['title'], $field['callback'], $option_page, $section_id );
+					}
+				}
+			}
+			
 			register_setting( 'yoimages-seo-group', 'yoimg_seo_settings', array( $this, 'sanitize_seo' ) );
 			register_setting( 'yoimages-search-group', 'yoimg_search_settings', array( $this, 'sanitize_search' ) );
-			
-			add_settings_section( 'yoimg_crop_options_section', __( 'Crop settings', YOIMG_DOMAIN ), array( $this, 'print_crop_options_section_info' ), 'yoimages-crop' );
-			add_settings_field( 'cropping_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
-			add_settings_field( 'crop_qualities', __( 'Crop qualities', YOIMG_DOMAIN), array( $this, 'crop_qualities_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
-			add_settings_field( 'retina_cropping_is_active', __( 'Retina friendly', YOIMG_DOMAIN ), array( $this, 'retina_cropping_is_active_callback' ), 'yoimages-crop', 'yoimg_crop_options_section' );
 			
 			add_settings_section( 'yoimg_imgseo_options_section', __( 'SEO for images', YOIMG_DOMAIN ), array( $this, 'print_imgseo_options_section_info' ), 'yoimages-seo' );
 			add_settings_field( 'imgseo_change_image_title', __( 'Change image title', YOIMG_DOMAIN ), array( $this, 'imgseo_change_image_title_callback' ), 'yoimages-seo', 'yoimg_imgseo_options_section' );
@@ -108,10 +121,6 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			add_settings_section( 'yoimg_search_options_section', __( 'Free stock images search', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
 			add_settings_field( 'search_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'search_is_active_callback' ), 'yoimages-search', 'yoimg_search_options_section' );
 			
-		}
-		
-		public function print_crop_options_section_info() {
-			print __('Enter your cropping settings here below', YOIMG_DOMAIN );
 		}
 	
 		public function print_imgseo_options_section_info() {
@@ -136,30 +145,6 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 				}
 				print '</ul>';
 			}
-		}
-		
-		public function cropping_is_active_callback() {
-			printf(
-				'<input type="checkbox" id="cropping_is_active" name="yoimg_crop_settings[cropping_is_active]" value="TRUE" %s />
-				<p class="description">' . __( 'If checked cropping is active', YOIMG_DOMAIN ) . '</p>',
-				$this->crop_options['cropping_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_CROP_ENABLED && ! isset( $this->crop_options['cropping_is_active'] ) ? 'checked="checked"' : '' )
-			);
-		}
-	
-		public function crop_qualities_callback() {
-			printf(
-				'<input type="text" id="crop_qualities" name="yoimg_crop_settings[crop_qualities]" value="%s" class="cropping_is_active-dep" />
-				<p class="description">' . __( 'Comma separated list of crop quality values (100 best to 50 medium)', YOIMG_DOMAIN ) . '</p>',
-				! empty( $this->crop_options['crop_qualities'] ) ? esc_attr( implode( ',', $this->crop_options['crop_qualities'] ) ) : implode( ',', unserialize( YOIMG_DEFAULT_CROP_QUALITIES ) )
-			);
-		}
-	
-		public function retina_cropping_is_active_callback() {
-			printf(
-			'<input type="checkbox" id="retina_cropping_is_active" class="cropping_is_active-dep" name="yoimg_crop_settings[retina_cropping_is_active]" value="TRUE" %s />
-				<p class="description">' . __( 'Flag to enable (enable this option if you are using a retina plugin that uses @2x as file naming convention when creating retina images from source - e.g. <a href="https://wordpress.org/plugins/wp-retina-2x/" target="_blank">WP Retina 2x</a>)', YOIMG_DOMAIN ) . '</p>',
-						$this->crop_options['retina_cropping_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_CROP_RETINA_ENABLED && ! isset( $this->crop_options['retina_cropping_is_active'] ) ? 'checked="checked"' : '' )
-			);
 		}
 		
 		public function imgseo_change_image_title_callback() {
@@ -216,46 +201,6 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 				<p class="description">' . __( 'If checked free stock images search is active', YOIMG_DOMAIN ) . '</p>',
 						$this->search_options['search_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_SEARCH_ENABLED && ! isset( $this->search_options['search_is_active'] ) ? 'checked="checked"' : '' )
 			);
-		}
-		
-		public function sanitize_crop( $input ) {
-			$new_input = array();
-			if( isset( $input['cropping_is_active'] ) && ( $input['cropping_is_active'] === 'TRUE' || $input['cropping_is_active'] === TRUE ) ) {
-				$new_input['cropping_is_active'] = TRUE;
-			} else {
-				$new_input['cropping_is_active'] = FALSE;
-			}
-			if( isset( $input['crop_qualities'] ) ) {
-				if ( is_array( $input['crop_qualities'] ) ) {
-					$crop_qualities = $input['crop_qualities'];
-				} else {
-					$crop_qualities = explode( ',', $input['crop_qualities'] );
-				}
-				$crop_qualities_count = 0;
-				foreach ($crop_qualities AS $index => $value) {
-					$crop_quality_value = ( int ) $value;
-					if ( $crop_quality_value > 0 && $crop_quality_value <= 100 ) {
-						$crop_qualities_arr[$crop_qualities_count] = $crop_quality_value;
-						$crop_qualities_count++;
-					}
-				}
-				if( empty( $crop_qualities_arr ) ) {
-					add_settings_error( 'yoimg_crop_options_group', 'crop_qualities', __( 'Crop qualities value is not valid, using default:', YOIMG_DOMAIN ) . ' ' . implode( ',', unserialize( YOIMG_DEFAULT_CROP_QUALITIES ) ), 'error' );
-					$new_input['crop_qualities'] = unserialize( YOIMG_DEFAULT_CROP_QUALITIES );
-				} else {
-					$crop_qualities_arr = array_unique( $crop_qualities_arr );
-					rsort( $crop_qualities_arr );
-					$new_input['crop_qualities'] = $crop_qualities_arr;
-				}
-			} else {
-				$new_input['crop_qualities'] = unserialize( YOIMG_DEFAULT_CROP_QUALITIES );
-			}
-			if( isset( $input['retina_cropping_is_active'] )  && ( $input['retina_cropping_is_active'] === 'TRUE' || $input['retina_cropping_is_active'] === TRUE ) ) {
-				$new_input['retina_cropping_is_active'] = TRUE;
-			} else {
-				$new_input['retina_cropping_is_active'] = FALSE;
-			}
-			return $new_input;
 		}
 	
 		public function sanitize_seo( $input ) {

@@ -50,7 +50,6 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 					<?php
 					}
 					?>
-					<a href="?page=yoimg-settings&tab=yoimages-search" class="nav-tab <?php echo $active_tab == 'yoimages-search' ? 'nav-tab-active' : ''; ?>"><?php  _e( 'Free stock images search', YOIMG_DOMAIN ); ?></a>
 				</h2>
 				<?php
 				if ( isset( $yoimg_modules[$active_tab] ) && $yoimg_modules[$active_tab]['has-settings'] ) {
@@ -100,49 +99,7 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 					}
 				}
 			}
-			
-			register_setting( 'yoimages-search-group', 'yoimg_search_settings', array( $this, 'sanitize_search' ) );
-			
-			add_settings_section( 'yoimg_search_options_section', __( 'Free stock images search', YOIMG_DOMAIN ), array( $this, 'print_search_options_section_info' ), 'yoimages-search' );
-			add_settings_field( 'search_is_active', __( 'Enable', YOIMG_DOMAIN ), array( $this, 'search_is_active_callback' ), 'yoimages-search', 'yoimg_search_options_section' );
-			
 		}
-
-		public function print_search_options_section_info() {
-			global $yoimg_search_providers;
-			print __('Free stock images search settings.<br/>Please note that searches are performed in english therefore use english search terms.', YOIMG_DOMAIN );
-			if ( isset( $yoimg_search_providers ) && ! empty( $yoimg_search_providers ) && is_array( $yoimg_search_providers ) ) {
-				print '<br /><br />';
-				print __('Images sources:', YOIMG_DOMAIN );
-				print '<ul>';
-				foreach ( $yoimg_search_providers as $yoimg_search_provider ) {
-					print '<li><a href="' . $yoimg_search_provider['url'] . '" target="_blank">' . $yoimg_search_provider['name'] . '</a>,';
-					print __('see T&C for more info.', YOIMG_DOMAIN );
-					print '</li>';
-				}
-				print '</ul>';
-			}
-		}
-	
-		public function search_is_active_callback() {
-			$search_options = get_option( 'yoimg_search_settings' );
-			printf(
-			'<input type="checkbox" id="search_is_active" name="yoimg_search_settings[search_is_active]" value="TRUE" %s />
-				<p class="description">' . __( 'If checked free stock images search is active', YOIMG_DOMAIN ) . '</p>',
-						$search_options['search_is_active'] ? 'checked="checked"' : ( YOIMG_DEFAULT_SEARCH_ENABLED && ! isset( $search_options['search_is_active'] ) ? 'checked="checked"' : '' )
-			);
-		}
-	
-		public function sanitize_search( $input ) {
-			$new_input = array();
-			if( isset( $input['search_is_active'] ) && ( $input['search_is_active'] === 'TRUE' || $input['search_is_active'] === TRUE ) ) {
-				$new_input['search_is_active'] = TRUE;
-			} else {
-				$new_input['search_is_active'] = FALSE;
-			}
-			return $new_input;
-		}
-		
 	}
 	
 	new YoImagesSettingsPage();

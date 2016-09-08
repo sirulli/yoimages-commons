@@ -86,11 +86,29 @@ if ( ! class_exists( 'YoImagesSettingsPage' ) ) {
 			<?php
 		}
 	
+		private function sanitize_item(&$item, $key) {
+			if ( is_string( $item ) ) {
+				$item = sanitize_text_field( $item );
+			} elseif ( is_array( $item ) ) {
+				$this->sanitize_input( $item );
+			}
+		}
+
+		private function sanitize_input(&$input) {
+			array_walk( $input, array( $this, 'sanitize_item' ) );
+		}
+
+		public function sanitize($input) {
+			$this->sanitize_input( $input );
+			return $input;
+		}
+
 		public function init_admin_page() {
 			$settings = apply_filters( 'yoimg_settings', array() );
 			foreach ( $settings as $setting ) {
 				$option_page = $setting['option']['page'];
 				register_setting( $setting['option']['option_group'], $setting['option']['option_name'], $setting['option']['sanitize_callback'] );
+				add_filter( 'sanitize_option_' . $setting['option']['option_name'], array( $this, 'sanitize' ) );
 				foreach ( $setting['option']['sections'] as $section ) {
 					$section_id = $section['id'];
 					add_settings_section( $section_id, $section['title'], $section['callback'], $option_page );

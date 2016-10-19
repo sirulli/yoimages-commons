@@ -381,3 +381,23 @@ msgstr "Settings"
 msgid "Page"
 msgstr "Page"
 
+#: 
+msgid "Cropping sizes"
+msgstr "Cropping sizes"
+
+#: 
+msgid "Size id"
+msgstr "Size ID"
+
+#: 
+msgid "User-friendly name"
+msgstr "User-friendly name"
+
+#: 
+msgid "Active"
+msgstr "Active"
+
+#: 
+msgid "There should be at least one manual crop activated. If you don't want any manual crop to be active, please disable the whole cropping using the first checkbox here below."
+msgstr "There should be at least one manual crop activated. If you don't want any manual crop to be active, please disable the whole cropping using the first checkbox here below."
+

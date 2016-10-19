@@ -381,3 +381,23 @@ msgstr "Instellingen"
 msgid "Page"
 msgstr "Pagina"
 
+#: 
+msgid "Cropping sizes"
+msgstr "Uitsnede afmetingen"
+
+#: 
+msgid "Size id"
+msgstr "Size id"
+
+#: 
+msgid "User-friendly name"
+msgstr "Gebruiksvriendelijke naam"
+
+#: 
+msgid "Active"
+msgstr "Actief"
+
+#: 
+msgid "There should be at least one manual crop activated. If you don't want any manual crop to be active, please disable the whole cropping using the first checkbox here below."
+msgstr "U dient ten minste één handmatige uitsnede te activeren. Wanneer u geen handmatige uitsnede wilt instellen, kunt u het beste de uitsnede functionaliteit in z'n geheel uitschakelen door bij deze optie het vinkje aan te klikken."
+
